@@ -1,0 +1,25 @@
+{
+  "name": "unit-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev:node": "nodemon dist/module/math.js",
+    "dev:ts": "tsc --watch",
+    "dev": "concurrently \"yarn run dev:ts\" \"yarn run dev:node\"",
+    "build": "rm -rf dist && tsc",
+    "db": "json-server --watch db.json",
+    "test": "jest --verbose"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.17",
+    "jest": "^24.8.0",
+    "json-server": "^0.15.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}

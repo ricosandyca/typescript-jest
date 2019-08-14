@@ -1,0 +1,16 @@
+{
+  "users": [
+    { "id": "USR001", "name": "John Doe", "age": 20, "companyId": "CPY001" },
+    { "id": "USR002", "name": "Brad Traversy", "age": 22, "companyId": "CPY002" },
+    { "id": "USR003", "name": "Karen", "age": 30, "companyId": "CPY002" },
+    { "id": "USR004", "name": "Taylor Otwell", "age": 20, "companyId": "CPY003" },
+    { "id": "USR005", "name": "Nick Name", "age": 40, "companyId": "CPY004" },
+    { "id": "USR006", "name": "Mike", "age": 19, "companyId": "CPY001" }
+  ],
+  "companies": [
+    { "id": "CPY001", "name": "Google", "description": "Google Web Developers" },
+    { "id": "CPY002", "name": "Facebook", "description": "React Developers" },
+    { "id": "CPY003", "name": "Apple", "description": "iOS Developers" },
+    { "id": "CPY004", "name": "Microsoft", "description": "Windows Developers" }
+  ]
+}
