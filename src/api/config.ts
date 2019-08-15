@@ -1,8 +1,8 @@
-interface IAPi {
+interface IApi {
   uri: string
 }
 
-const api = {
+const api: IApi = {
   uri: 'http://localhost:3000'
 }
 
