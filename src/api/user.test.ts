@@ -14,7 +14,7 @@ describe('User\'s API asynchronus testing', () => {
   it('Should return users data', async () => {
     const { data } = await axios.get(`${proxy}/users`)
     expect(data).toBeDefined()
-    expect(data instanceof Array).toBe(true)
+    expect(data instanceof Array).toBeTruthy()
   })
 
   it('Should return user data with same ID', async () => {
@@ -22,7 +22,7 @@ describe('User\'s API asynchronus testing', () => {
       const user_id = 'USR001'
       const { data } = await axios.get(`${proxy}/users/${user_id}`)
       expect(data).toBeDefined()
-      expect(data instanceof Object).toBe(true)
+      expect(data instanceof Object).toBeTruthy()
       expect(data.id).toBe(user_id)
     } catch (err) {
       const { response: { status } } = err
@@ -49,7 +49,7 @@ describe('User\'s API asynchronus testing', () => {
       }
       const { data } = await axios.post(`${proxy}/users`, new_user)
       expect(data).toBeDefined()
-      expect(data instanceof Object).toBe(true)
+      expect(data instanceof Object).toBeTruthy()
       expect(data.name === new_user.name && data.age === new_user.age).toBe(true)
     } catch (err) {
       const { response: { status } } = err
@@ -67,7 +67,7 @@ describe('User\'s API asynchronus testing', () => {
       }
       const { data } = await axios.put(`${proxy}/users/${target_user.id}`, update_user)
       expect(data).toBeDefined()
-      expect(data instanceof Object).toBe(true)
+      expect(data instanceof Object).toBeTruthy()
       expect(data.name === update_user.name && data.age === update_user.age).toBe(true)
     } catch (err) {
       const { response: { status } } = err
@@ -81,7 +81,7 @@ describe('User\'s API asynchronus testing', () => {
       const target_user = users[users.length - 1]
       const { data } = await axios.delete(`${proxy}/users/${target_user.id}`)
       expect(data).toBeDefined()
-      expect(data instanceof Object).toBe(true)
+      expect(data instanceof Object).toBeTruthy()
       expect(JSON.stringify(data)).toBe('{}')
     } catch (err) {
       const { response: { status } } = err
